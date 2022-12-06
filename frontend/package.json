@@ -1,0 +1,23 @@
+{
+  "name": "python-project-flask",
+  "version": "1.0.0",
+  "description": "Python project flask",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "start": "http-server -a localhost -p 8001"
+  },
+  "author": "kzulfazriawan",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "angular-sanitize": "^1.8.2",
+    "http-server": "^14.1.1",
+    "ng-file-upload": "^12.2.13",
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "devDependencies": {}
+}

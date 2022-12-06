@@ -1,0 +1,5 @@
+alembic
+sqlalchemy
+mysqlclient>=2
+flask
+flask-wtf

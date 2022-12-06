@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  db:
+    container_name: flask_mariadb
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 'mypasswd'
+      MYSQL_DATABASE: 'flask_project'
+      MYSQL_USER: 'myuser'
+      MYSQL_PASSWORD: 'mypasswd'
+  web:
+    container_name: flask_web
+    command: python main.py
+    build: .
+    volumes:
+      - ./backend:/project
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db

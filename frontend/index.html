@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Python project flask</title>
+		<!-- CSS FILES -->
+		<link rel="stylesheet" type="text/css" href="/dist/css/uikit.min.css">
+	</head>
+    <body ng-app="App" style="height:100vh">
+        <div class="uk-container">
+            <nav uk-navbar>
+                <div class="uk-navbar-left">
+                    <ul class="uk-navbar-nav">
+                        <li><a href="/#!/">home</a></li>
+                    </ul>
+                </div>
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav">
+                        <li>
+                            <a class="uk-navbar-toggle uk-navbar-toggle-animate" uk-navbar-toggle-icon href="#"></a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="#">Products</a></li>
+                                    <li><a href="#">Variants</a></li>
+                                    <li><a href="/#!/images">Images</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div ng-view></div>
+        </div>
+
+        <script src="/dist/js/uikit.min.js"></script>
+        <script src="/dist/js/uikit-icons.min.js"></script>
+        <script src="/dist/main.js"></script>
+    </body>
+</html>
