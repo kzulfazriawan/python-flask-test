@@ -10,4 +10,14 @@ module.exports = function($scope, $timeout, $location, $window, Http){
         name: {type: "input", value: null},
         description: {type: "text", value: null},
     }
+
+    $scope.data = [];
+
+    $scope.init = function(){
+        Http.sendGet("http://localhost:8000/product").then(
+            function success(response){
+                $scope.data = response.data;
+            }
+        )
+    }
 }

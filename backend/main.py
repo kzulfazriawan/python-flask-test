@@ -1,5 +1,7 @@
 import os
 
+from flask_cors import CORS
+
 from resources.routes import Routes
 from src.crawler import walk
 
@@ -22,6 +24,7 @@ class Main(Routes):
 if __name__ == "__main__":
     main = Main()
     main.app.config['WTF_CSRF_ENABLED'] = False
+    cors = CORS(main.app, origins="*")
     with main.app.test_request_context():
         main.resources()
         main.run()
